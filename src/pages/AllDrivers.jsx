@@ -1,5 +1,9 @@
 function AllDrivers() {
-    return <h2>All Drivers</h2>
+  return (
+    <div>
+      <h2>All Drivers</h2>
+    </div>
+  );
 }
 
-export default AllDrivers
+export default AllDrivers;
