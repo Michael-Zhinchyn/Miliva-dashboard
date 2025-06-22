@@ -15,7 +15,6 @@ function Header() {
       <Nav>
         <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/drivers">All Drivers</StyledLink>
-        <StyledLink to="/add-driver">Add Driver</StyledLink>
       </Nav>
     </WelcomeHeader>
   );
