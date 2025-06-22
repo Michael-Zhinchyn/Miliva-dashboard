@@ -95,7 +95,7 @@ const AddDriverForm = () => {
         <Field name="trailer.licencePlate" type="text" />
 
         {/* Submit Button */}
-        <button type="submit">Add Driver</button>
+        <button type="submit">SAVE</button>
       </StyledForm>
     </Formik>
   );
