@@ -1,6 +1,6 @@
-import { Header } from "../../components/ManagementLayout/Header";
-import { NavBar } from "../../components/ManagementLayout/NavBar";
-import { Main } from "../../components/ManagementLayout/Main";
+import { Header } from "../../components/Management-Layout/Header";
+import { NavBar } from "../../components/Management-Layout/NavBar";
+import { Main } from "../../components/Management-Layout/Main";
 
 const ManagementLayout = () => {
   return (

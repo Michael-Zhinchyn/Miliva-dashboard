@@ -4,11 +4,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import App from "./components/App"; // логін сторінка
 import ManagementLayout from "./pages/management/Layout";
-import MainPage from "./pages/management/MainPage";
-import DriversPage from "./pages/management/DriversPage";
-import TrucksPage from "./pages/management/TrucksPage";
-import TrailersPage from "./pages/management/TrailersPage";
-import StaffPage from "./pages/management/StaffPage";
+import Main from "./pages/management/Main";
+import Drivers from "./pages/management/Drivers";
+import Trucks from "./pages/management/Trucks";
+import Trailers from "./pages/management/Trailers";
+import Staff from "./pages/management/Staff";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -19,11 +19,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
         {/* менеджмент дашборд */}
         <Route path="/management" element={<ManagementLayout />}>
-          <Route index element={<MainPage />} />
-          <Route path="drivers" element={<DriversPage />} />
-          <Route path="trucks" element={<TrucksPage />} />
-          <Route path="trailers" element={<TrailersPage />} />
-          <Route path="staff" element={<StaffPage />} />
+          <Route index element={<Main />} />
+          <Route path="drivers" element={<Drivers />} />
+          <Route path="trucks" element={<Trucks />} />
+          <Route path="trailers" element={<Trailers />} />
+          <Route path="staff" element={<Staff />} />
         </Route>
       </Routes>
     </BrowserRouter>
