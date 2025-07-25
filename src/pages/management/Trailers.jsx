@@ -1,5 +1,12 @@
+import { Trailers } from "../../components/Management-Trailers/Trailers";
+
 const TrailersPage = () => {
-  return <h3>Trailers Page</h3>;
+  return (
+    <div>
+      <h2>Trailers</h2>
+      <Trailers />
+    </div>
+  );
 };
 
 export default TrailersPage;

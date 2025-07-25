@@ -1,7 +1,9 @@
+import { Trucks } from "../../components/Management-Trucks/Trucks";
+
 const TrucksPage = () => {
   return (
     <div>
-      <h2>Trucks page</h2>
+      <Trucks />
     </div>
   );
 };

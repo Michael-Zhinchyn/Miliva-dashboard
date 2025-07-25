@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Formik, Form, Field } from "formik";
+import { useState } from "react";
 import {
   Backdrop,
   ModalContainer,
@@ -12,18 +12,16 @@ import {
 } from "./Modal.styled";
 
 const initialValues = {
-  firstName: "",
-  lastName: "",
-  phoneNumber: "",
-  licence: "",
-  cdl: "",
-  username: "",
-  password: "",
-  role: "driver",
-  documents: [], // тут зберігатимемо всі файли
+  year: "",
+  make: "",
+  model: "",
+  capacity: "",
+  vinNumber: "",
+  plateNumber: "",
+  documents: [], // масив файлів
 };
 
-export const ModalDriver = ({ onClose }) => {
+export const ModalTrailer = ({ onClose }) => {
   const [dragOver, setDragOver] = useState(false);
 
   return (
@@ -32,52 +30,39 @@ export const ModalDriver = ({ onClose }) => {
         {/* Кнопка закриття */}
         <CloseButton onClick={onClose}>✕</CloseButton>
 
-        <h2>Add Driver</h2>
+        <h2>Add Trailer</h2>
 
         <Formik
           initialValues={initialValues}
           onSubmit={(values) => {
-            console.log("Submitted driver:", values);
+            console.log("Submitted trailer:", values);
             onClose();
           }}
         >
           {({ values, setFieldValue }) => (
             <Form>
-              {/* Основні дані водія */}
-              <label>First Name</label>
-              <Field name="firstName" type="text" />
+              {/* Поля трейлера */}
+              <label>Year</label>
+              <Field name="year" type="text" />
 
-              <label>Last Name</label>
-              <Field name="lastName" type="text" />
+              <label>Make</label>
+              <Field name="make" type="text" />
 
-              <label>Phone Number</label>
-              <Field name="phoneNumber" type="text" />
+              <label>Model</label>
+              <Field name="model" type="text" />
 
-              <label>Driver's Licence Number</label>
-              <Field name="licence" type="text" />
+              <label>Capacity</label>
+              <Field name="capacity" type="text" />
 
-              <label>CDL?</label>
-              <div>
-                <label>
-                  <Field type="radio" name="cdl" value="yes" /> Yes
-                </label>
-                <label>
-                  <Field type="radio" name="cdl" value="no" /> No
-                </label>
-              </div>
+              <label>VIN Number</label>
+              <Field name="vinNumber" type="text" />
 
-              <h3>Driver Login Credentials</h3>
-              <label>Username</label>
-              <Field name="username" type="text" />
+              <label>Plate Number</label>
+              <Field name="plateNumber" type="text" />
 
-              <label>Password</label>
-              <Field name="password" type="password" />
+              <h3>Attach Documents</h3>
 
-              <Field name="role" type="hidden" value="driver" />
-
-              <h3>Attach Documents (License front/back, Medical card)</h3>
-
-              {/* ✅ Drag-and-Drop зона */}
+              {/* Drag-and-Drop зона */}
               <DropZone
                 $dragOver={dragOver}
                 onDragOver={(e) => {
@@ -104,7 +89,7 @@ export const ModalDriver = ({ onClose }) => {
                 />
               </DropZone>
 
-              {/* ✅ Превʼю доданих файлів */}
+              {/* Превʼю доданих файлів */}
               {values.documents.length > 0 && (
                 <PreviewContainer>
                   {values.documents.map((file, index) => {

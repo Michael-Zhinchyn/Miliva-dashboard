@@ -29,12 +29,12 @@ export const CloseButton = styled.button`
 `;
 
 export const DropZone = styled.div`
-  border: 2px dashed ${({ $dragOver }) => ($dragOver ? "blue" : "#aaa")};
+  border: 2px dashed ${({ dragOver }) => (dragOver ? "blue" : "#aaa")};
   padding: 20px;
   text-align: center;
   margin-bottom: 10px;
   border-radius: 8px;
-  background: ${({ $dragOver }) => ($dragOver ? "#f0f8ff" : "#fafafa")};
+  background: ${({ dragOver }) => (dragOver ? "#f0f8ff" : "#fafafa")};
   cursor: pointer;
 
   input[type="file"] {

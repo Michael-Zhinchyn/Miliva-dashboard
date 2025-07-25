@@ -5,11 +5,12 @@ export const Drivers = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   return (
     <div>
-      <h3>ALL DRIVERS </h3>
+      <h2>Drivers</h2>
+
       <button onClick={() => setModalOpen(true)}>ADD DRIVER</button>
+      <p>List of drivers will be placed below after backend ready</p>
 
       {isModalOpen && <ModalDriver onClose={() => setModalOpen(false)} />}
-      <div>list of drivers</div>
     </div>
   );
 };

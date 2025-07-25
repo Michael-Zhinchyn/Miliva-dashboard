@@ -1,6 +1,11 @@
-//
+import { Staff } from "../../components/Manegement-Staff/Staff";
+
 const StaffPage = () => {
-  return <h3>Staff Page</h3>;
+  return (
+    <div>
+      <Staff />
+    </div>
+  );
 };
 
 export default StaffPage;
