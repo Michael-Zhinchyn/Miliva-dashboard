@@ -1,4 +1,4 @@
-import { Trucks } from "../../components/Management-Trucks/Trucks";
+import { Trucks } from "../../components/Management/Trucks/Trucks";
 
 const TrucksPage = () => {
   return (

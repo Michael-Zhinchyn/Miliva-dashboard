@@ -1,4 +1,4 @@
-import { Trailers } from "../../components/Management-Trailers/Trailers";
+import { Trailers } from "../../components/Management/Trailers/Trailers";
 
 const TrailersPage = () => {
   return (

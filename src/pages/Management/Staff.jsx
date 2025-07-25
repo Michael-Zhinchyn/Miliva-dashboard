@@ -1,4 +1,4 @@
-import { Staff } from "../../components/Manegement-Staff/Staff";
+import { Staff } from "../../components/Management/Staff/Staff";
 
 const StaffPage = () => {
   return (

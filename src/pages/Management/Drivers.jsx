@@ -1,4 +1,4 @@
-import { Drivers } from "../../components/Management-Drivers/Drivers";
+import { Drivers } from "../../../src/components/Management/Drivers/Drivers";
 
 const DriversPage = () => {
   return (
