@@ -1,15 +1,15 @@
-import { useState } from "react";
 import { ModalStaff } from "./ModalStaff";
+import { useModal } from "../../../hooks/useModal";
 
 export const Staff = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isOpen, openModal, closeModal } = useModal();
 
   return (
     <div>
       <h2>Staff</h2>
-      <button onClick={() => setIsModalOpen(true)}>Add Person</button>
+      <button onClick={openModal}>Add Person</button>
 
-      {isModalOpen && <ModalStaff onClose={() => setIsModalOpen(false)} />}
+      {isOpen && <ModalStaff onClose={closeModal} />}
     </div>
   );
 };

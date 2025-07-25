@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { useModal } from "../../../hooks/useModal";
 import { ModalTruck } from "./Modal";
 
 export const Trucks = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
+  const { isOpen, openModal, closeModal } = useModal();
 
   return (
     <div>
       <h2>Trucks</h2>
-      <button onClick={() => setModalOpen(true)}>ADD TRUCK</button>
+      <button onClick={openModal}>ADD TRUCK</button>
       <p>List of Trucks will be placed below after backend ready</p>
 
-      {isModalOpen && <ModalTruck onClose={() => setModalOpen(false)} />}
+      {isOpen && <ModalTruck onClose={closeModal} />}
     </div>
   );
 };

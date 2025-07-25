@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useModal } from "../../../hooks/useModal";
 import { ModalTrailer } from "./Modal";
 
 export const Trailers = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isOpen, openModal, closeModal } = useModal();
 
   return (
     <div>
-      <button onClick={() => setIsModalOpen(true)}>ADD TRAILER</button>
+      <button onClick={openModal}>ADD TRAILER</button>
       <p>List of trailers will be placed below after backend ready</p>
 
-      {isModalOpen && <ModalTrailer onClose={() => setIsModalOpen(false)} />}
+      {isOpen && <ModalTrailer onClose={closeModal} />}
     </div>
   );
 };
